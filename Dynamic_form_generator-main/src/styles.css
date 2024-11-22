@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+.app {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .editor, .form-preview {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  

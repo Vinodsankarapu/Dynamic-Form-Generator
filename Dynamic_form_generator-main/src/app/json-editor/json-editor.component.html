@@ -1,0 +1,21 @@
+<!-- <div class="json-editor">
+    <ngx-monaco-editor 
+      [(ngModel)]="schema" 
+      [options]="editorOptions" 
+      (ngModelChange)="updateSchema($event)">
+    </ngx-monaco-editor>
+  </div> -->
+
+  
+
+
+
+
+
+<div class="json-editor">
+    <ngx-monaco-editor
+  [value]="schema"
+  [options]="editorOptions"
+  (onChange)="updateSchema($event)">
+</ngx-monaco-editor>
+  </div>

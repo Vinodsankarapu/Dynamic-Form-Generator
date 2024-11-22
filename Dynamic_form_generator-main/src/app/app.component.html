@@ -1,0 +1,12 @@
+<div class="app">
+  <div class="editor">
+    <app-json-editor (schemaChange)="updateSchema($event)"></app-json-editor>
+  </div>
+  <div class="form-preview">
+    <app-form-generator [schema]="schema"></app-form-generator>
+  </div>
+</div>
+
+
+<app-json-editor (schemaChange)="updateSchema($event)"></app-json-editor>
+

@@ -1,0 +1,25 @@
+<div *ngIf="form">
+    <h2>{{ formTitle }}</h2>
+    <form [formGroup]="form">
+      <div *ngFor="let field of formFields">
+        <label>{{ field.label }}</label>
+        <input 
+          *ngIf="field.type === 'text' || field.type === 'email' || field.type === 'number'" 
+          [type]="field.type" 
+          [placeholder]="field.placeholder" 
+          [formControlName]="field.label" 
+        />
+        <div *ngIf="field.type === 'radio'">
+          <div *ngFor="let option of field.options">
+            <input type="radio" [value]="option" [formControlName]="field.label" /> {{ option }}
+          </div>
+        </div>
+        <div *ngIf="field.type === 'checkbox'">
+          <div *ngFor="let option of field.options">
+            <input type="checkbox" [formControlName]="option" /> {{ option }}
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  
